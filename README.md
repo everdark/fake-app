@@ -1,4 +1,7 @@
-# Setup
+# What is it
+
+This is a repository to demonstrate `opentelemetry` observability using a manually instrumented library,
+[fake-evaluator](https://github.com/everdark/fake-evaluator).
 
 ```bash
 # install dependencies
