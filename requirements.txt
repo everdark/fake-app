@@ -1,2 +1,3 @@
 -e ../fake-evaluator
 opentelemetry-sdk
+opentelemetry-exporter-otlp-proto-grpc
