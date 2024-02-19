@@ -9,6 +9,7 @@ We can always export the telemetry to console for debugging purpose.
 
 ```bash
 # install dependencies
+git clone git@github.com:everdark/fake-evaluator.git
 pip install -r requirements.txt
 
 # run the app, the telemetry will go to console, instrumentation is done at package level
