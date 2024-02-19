@@ -40,21 +40,17 @@ docker run --rm --name prom -d \
     prom/prometheus:v2.45.3
 ```
 
-
 ## The sdk-collector-backend pattern
-
-*W.I.P.*
 
 Also known as the [agent pattern](https://opentelemetry.io/docs/collector/deployment/agent/).
 
-Firstly, to test a collector:
-
 ```bash
-docker run --rm --name collector \
-    -p 4317:4317 \
-    -p 8888:8888 -p 8889:8889 \
-    -v $(pwd)/otel-collector-config.yaml:/etc/otel/config.yaml \
-    otel/opentelemetry-collector-contrib:0.94.0
+# spin up collector, and trace/metric backend
+docker compose up -d
 
-python app.py  # create some telemetry
+# now create some telemetry
+python app.py
 ```
+
+- Jaeger UI for traces: `http://localhost:16686`
+- Prometheus UI for metrics: `http://localhost:9090`

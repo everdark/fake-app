@@ -13,7 +13,7 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import (BatchSpanProcessor,
                                             ConsoleSpanExporter)
 
-COLLECTOR_ENDPOINT = "http://127.0.0.1:4317"  # do not use https for all-in-one local test
+COLLECTOR_ENDPOINT = "http://localhost:4317"  # do not use https for all-in-one local test
 if COLLECTOR_ENDPOINT:
     processor = BatchSpanProcessor(OTLPSpanExporter(endpoint=COLLECTOR_ENDPOINT))
     reader = PeriodicExportingMetricReader(
