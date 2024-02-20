@@ -11,8 +11,12 @@ exporters:
     endpoint: jaeger:4317
     tls:
       insecure: true
+  otlp/elastic:
+    endpoint: 0.0.0.0:8200  # elastic apm-server endpoint
+    tls:
+      insecure: true
   prometheus:
-    endpoint: 0.0.0.0:8889  # not working
+    endpoint: 0.0.0.0:8889
   debug:  # export to console
 
 processors:
